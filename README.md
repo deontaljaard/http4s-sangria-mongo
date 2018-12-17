@@ -24,6 +24,20 @@ This should pull and run the latest mongo image.
 
 Add the required DB and collections - have a look at reference.conf in model/src/main/resources.
 
+Ensure mongodb-clients is installed
+```bash
+sudo apt install mongodb-clients
+```
+
+Use the sample documents provided in the repo to add data to the collections.
+```bash
+mongoimport --db persons --collection persons --file persons.json
+```
+Add a generated mongo id for a peson into the devices.json
+```bash
+mongoimport --db persons --collection devices --file devices.json
+```
+
 To start the http4s-mongo service container, run the following:
 ```bash
 docker run --name http4s -d -p 8080:8080 --link mongo:mongo deontaljaard.github.io/service

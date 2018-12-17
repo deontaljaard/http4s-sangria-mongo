@@ -1,0 +1,18 @@
+{
+  "firstName" : "Frodo",
+  "lastName" : "Baggins",
+  "email" : "frodo@lotr.com",
+  "registrationData" : {
+    "deviceUID" : "123456789"
+  },
+  "created" : ISODate("2018-10-04T18:21:25.487Z")
+}
+{
+  "firstName" : "Samwise",
+  "lastName" : "Gamgee",
+  "email" : "samwise@lotr.com",
+  "registrationData" : {
+    "deviceUID" : "123456789"
+  },
+  "created" : ISODate("2018-10-04T18:21:25.487Z")
+}

@@ -1,0 +1,5 @@
+{
+  "personId" : ObjectId("5be0b2c8bbe969ccdcc1ca7b"),
+  "deviceUID" : "123456789",
+  "created" : ISODate("2018-10-04T18:21:25.487Z")
+}
