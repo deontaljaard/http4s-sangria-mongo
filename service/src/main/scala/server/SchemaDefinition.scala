@@ -89,28 +89,5 @@ object SchemaDefinition {
     )
   )
 
-
-  //  val Query = ObjectType(
-  //    "Query", fields[CharacterRepo, Unit](
-  //      Field("hero", Character,
-  //        arguments = EpisodeArg :: Nil,
-  //        deprecationReason = Some("Use `human` or `droid` fields instead"),
-  //        resolve = (ctx) ⇒ ctx.ctx.getHero(ctx.arg(EpisodeArg))),
-  //      Field("human", OptionType(Human),
-  //        arguments = ID :: Nil,
-  //        resolve = ctx ⇒ ctx.ctx.getHuman(ctx arg ID)),
-  //      Field("droid", Droid,
-  //        arguments = ID :: Nil,
-  //        resolve = ctx ⇒ ctx.ctx.getDroid(ctx arg ID).get),
-  //      Field("humans", ListType(Human),
-  //        arguments = LimitArg :: OffsetArg :: Nil,
-  //        resolve = ctx ⇒ ctx.ctx.getHumans(ctx arg LimitArg, ctx arg OffsetArg)),
-  //      Field("droids", ListType(Droid),
-  //        arguments = LimitArg :: OffsetArg :: Nil,
-  //        resolve = ctx ⇒ ctx.ctx.getDroids(ctx arg LimitArg, ctx arg OffsetArg))
-  //    ))
-
-  //  val StarWarsSchema = Schema(Query)
-
   val schema = Schema(QueryType)
 }

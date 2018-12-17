@@ -5,7 +5,7 @@ import sbtdocker.DockerPlugin.autoImport._
 
 name := "http4s-sangria-mongo"
 
-val port: Int = sys.props.getOrElse("PORT", "8080").toInt
+val port: Int = sys.props.getOrElse("HTTP_PORT", "8080").toInt
 
 
 lazy val dockerSettings = Seq(
@@ -42,7 +42,7 @@ lazy val dockerSettings = Seq(
 lazy val loginAwsEcr = TaskKey[Unit]("loginAwsEcr", "Login AWS ECR")
 loginAwsEcr := {
   import sys.process._
-  val dockerLogin = Seq("aws", "ecr", "get-login", "--no-include-email", "--region", "eu-central-1", "--profile", "qa-wd").!!
+  val dockerLogin = Seq("aws", "ecr", "get-login", "--no-include-email", "--region", "eu-central-1", "--profile", "your-aws-profile").!!
   dockerLogin.replaceAll("\n", "").split(" ").toSeq.!
 }
 
